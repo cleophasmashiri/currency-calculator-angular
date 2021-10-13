@@ -1,0 +1,7 @@
+ <div class="form-group row">
+    <input #amount class="form-control col" type="text" placeholder="Enter Currency Amount" (change)="handleAmountChanged(amount.value)" >
+    <select #currencyType [value]="currencyName" class="col-md-2 form-control" (change)="handleCurrencyChanged(currencyType.value)" >
+        <option>Select Currency</option>
+        <option *ngFor="let curr of currencies" [value]="curr.currency">{{curr.currency}}</option>
+    </select>
+  </div>
